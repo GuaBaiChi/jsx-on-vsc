@@ -2,7 +2,7 @@
 // Question 4, Display the API data in UI components
 
 import React from "react"
-import axios from "axios"
+import axios, { AxiosResponse } from "axios"
 // https://www.npmjs.com/package/axios
 // npm install axios
 
@@ -25,14 +25,18 @@ interface UserInfo {
   picture: UserPicture
 }
 
+interface ApiResults {
+  results: Array<UserInfo>
+}
+
 const fetchRandomData = () => {
   return axios.get('https://randomuser.me/api')
-    .then(({ data }) => {
-      console.log(data)
-      return data
+    .then((response: AxiosResponse<ApiResults>) => {
+      return response.data.results;
     })
     .catch(err => {
       console.error(err)
+      return new Array<UserInfo>();
     })
 }
 
@@ -41,14 +45,14 @@ const getFullUserName = (userInfo: UserInfo) => {
   return `${first} ${last}`
 }
 
-export default function ApiRead() {
+export default function ApiReadOG() {
   const [userInfos, setUserInfos] = useState<Array<UserInfo>>([])
   const [randomUserDataJSON, setRandomUserDataJSON] = useState('')
 
   useEffect(() => {
-    fetchRandomData().then((randomData) => {
+    fetchRandomData().then((randomData: Array<UserInfo>) => {
       setRandomUserDataJSON(JSON.stringify(randomData, null, 2) || 'No user data found')
-      setUserInfos(randomData.results)
+      setUserInfos(randomData)
     })
   }, [])
 
