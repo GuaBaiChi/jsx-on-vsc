@@ -37,14 +37,6 @@ export default function Poke() {
       })
   }, [])
 
-  // useEffect(() => {
-  //   fetch('https://pokeapi.co/api/v2/pokemon-form/1')
-  //     .then(response2 => response2.json())
-  //     .then((data2: PokeApiData) => {
-  //       setPokeData2(data2);
-  //     })
-  // }, [])
-
   const getImgUrl = (url: string) => {
     let urlParts = url.split("/")
     let pokemonId = urlParts[urlParts.length - 2];
@@ -65,33 +57,3 @@ export default function Poke() {
     </ul>
   )
 }
-
-
-// export default Poke
-
-// useEffect(() => {
-
-// }, [])
-
-
-// https://jsonformatter.org/
-
-// https://reactjsexample.com/tag/pokedex/
-// https://pokeapi.co/api/v2
-// https://pokeapi.co/api/v2/pokemon/
-// https://pokeapi.co/api/v2/pokemon-form
-// this one above has sprites. BAM
-
-// ex1
-// https://reactjsexample.com/pokedex-using-a-external-api-and-react-hooks/
-
-// ex2
-// https://reactjsexample.com/the-pokedex-project-using-react-js-and-pokeapi/
-// https://github.com/muricapham/pokedex-react
-
-
-// https://jsonplaceholder.typicode.com/users
-
-// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
-
-// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{}.png
