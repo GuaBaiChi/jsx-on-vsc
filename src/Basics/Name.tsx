@@ -13,19 +13,13 @@ const Name = () => {
   return (
     <div>
       <h1>Enter your name</h1>
-      <form
-        onSubmit={handleSubmit}
-      >
-        <input
-          onChange={event => setFirstName(event.target.value)}
+      <form onSubmit={handleSubmit}>
+        <input onChange={event =>
+          setFirstName(event.target.value)}
           value={firstName}
         />
-        <button type="submit">
-          Enter
-        </button>
-        <h2>
-          {message}
-        </h2>
+        <button type="submit">Enter</button>
+        <h2>{message}</h2>
       </form>
     </div>
   );

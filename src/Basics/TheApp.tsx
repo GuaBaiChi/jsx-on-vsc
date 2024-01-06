@@ -6,17 +6,19 @@ import ApiReadOG from './ApiReadOG';
 import ApiReadAxios from './ApiReadAxios';
 import ApiReadFetch from './ApiReadFetch';
 import Yousaf from './Yousaf';
+import Name2 from './Name2';
 
 
 function TheApp() {
   return (
     <div>
-      <Counter />
-      <Name />
-      <ApiReadOG />
-      <ApiReadFetch />
+      {/* <Counter /> */}
+      {/* <Name /> */}
+      <Name2 />
+      {/* <ApiReadOG /> */}
+      {/* <ApiReadFetch /> */}
       {/* <ApiReadAxios /> */}
-      <Yousaf />
+      {/* <Yousaf /> */}
     </div>
   );
 }
