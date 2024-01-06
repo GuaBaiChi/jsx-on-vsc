@@ -1,28 +1,27 @@
-import { useState } from 'react'
+import React, { useState, FormEvent } from 'react';
 
-const Name = () => {
+const Name3 = () => {
   const [firstName, setFirstName] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = (event: { preventDefault: () => void; }) => {
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault()
     setMessage(`Welcome, ${firstName}`)
-    setFirstName('')
-  };
+  }
 
   return (
     <div>
       <h1>Enter your name</h1>
       <form onSubmit={handleSubmit}>
-        <input onChange={event =>
-          setFirstName(event.target.value)}
+        <input type="text"
           value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
         />
         <button type="submit">Enter</button>
-        <h2>{message}</h2>
       </form>
+      <h2>{message}</h2>
     </div>
-  );
-};
+  )
+}
 
-export default Name
+export default Name3

@@ -13,7 +13,7 @@ function TheApp() {
   return (
     <div>
       {/* <Counter /> */}
-      {/* <Name /> */}
+      <Name />
       <Name2 />
       {/* <ApiReadOG /> */}
       {/* <ApiReadFetch /> */}
