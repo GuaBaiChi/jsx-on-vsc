@@ -7,6 +7,7 @@ import ApiReadAxios from './ApiReadAxios';
 import ApiReadFetch from './ApiReadFetch';
 import Yousaf from './Yousaf';
 import Name2 from './Name2';
+import Name3 from './Name3';
 
 
 function TheApp() {
@@ -14,7 +15,8 @@ function TheApp() {
     <div>
       {/* <Counter /> */}
       <Name />
-      <Name2 />
+      {/* <Name2 /> */}
+      <Name3 />
       {/* <ApiReadOG /> */}
       {/* <ApiReadFetch /> */}
       {/* <ApiReadAxios /> */}
